@@ -1,11 +1,13 @@
 import React from 'react'
 
 export const Tarjeta = ({ foto }) => {
+
     return (
         <article>
-            <h3>{foto.url}</h3>
-            <h3>{foto.titulo}</h3>
-            <img src={foto.url} alt={"Titulo de la foto " + foto.id}></img>
+            <h3>{foto.alt}</h3>
+            <div className='imgContainer'>
+                <img src={foto.src.medium} alt={foto.alt}></img>
+            </div>
         </article>
     )
 }

@@ -5,7 +5,7 @@ import { GridGaleria } from './GridGaleria'
 export const Galeria = () => {
 
     //const categorias = ['perros', 'burros', 'gatos']
-    const [categorias, setCategorias] = useState(['perros', 'burros', 'gatos'])
+    const [categorias, setCategorias] = useState([])
 
 
     const onNuevaCategoria = (categoria) => {
@@ -26,18 +26,16 @@ export const Galeria = () => {
 
     return (
         <>
-
             <h1>Practica de galeria de pexels con React</h1>
-
             <Formulario onNuevaCategoria={onNuevaCategoria} />
-
             {
                 categorias?.map((categoria) => (
-
-                    <GridGaleria categoria={categoria} />
-
+                    <>
+                        <section>
+                            <GridGaleria categoria={categoria} />
+                        </section>
+                    </>
                 )
-
                 )
             }
         </>
